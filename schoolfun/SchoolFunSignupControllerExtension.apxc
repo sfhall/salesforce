@@ -1,0 +1,31 @@
+public class SchoolFunSignupControllerExtension
+{
+    public Child__c child;
+
+    public SchoolFunSignupControllerExtension(ApexPages.StandardController stdCon)
+    {
+        this.child = (Child__c)stdCon.getRecord();
+    }
+
+    public Child__c getChild()
+    {
+        return child;
+    }    
+
+    public string test()
+    {
+        return 'testing function calls';
+    }
+
+    public void save()
+    {
+        try
+        {
+            insert child;
+        }   
+        catch(Exception ex)
+        {
+            system.debug('Exception is'+ ex);
+        }
+    }
+}
