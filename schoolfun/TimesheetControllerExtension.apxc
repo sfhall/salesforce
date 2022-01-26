@@ -1,0 +1,9 @@
+public class TimesheetControllerExtension
+{
+    public pmdm__ProgramEngagement__c PE;
+
+    public TimesheetControllerExtension(ApexPages.StandardController stdCon)
+    {
+        this.PE = (pmdm__ProgramEngagement__c)stdCon.getRecord();
+    }
+}

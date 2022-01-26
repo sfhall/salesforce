@@ -12,11 +12,6 @@ public class SchoolFunSignupControllerExtension
         return child;
     }    
 
-    public string test()
-    {
-        return 'testing function calls';
-    }
-
     public void save()
     {
         try

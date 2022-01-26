@@ -1,0 +1,31 @@
+@isTest
+public class SchoolFunTest
+{
+    Child__c child = new Child__c(
+        Name = 'Test',
+        child_last_name__c = 'Last',
+        child_DOB__c = '01/01/1999',
+        Grade__c = '3',
+        child__address__c = '31-11 12th St, LIC, NY',
+        child_parent__c = 'Parent Name',
+        child_phone__c = '7894563654',
+        child_email__c = 'test@email.com',
+        child_pick_up__c = 'Test name, tester name',
+        child_walk_home__c = 'True',
+        child_allergies__c = 'No',
+        child_health__c = 'No',
+    );
+
+    @isTest
+    static void testGetter(){
+        
+        return;
+    }
+
+    @isTest
+    static void testSave(){
+        
+        return;
+    }
+
+}
