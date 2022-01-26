@@ -1,6 +1,7 @@
 @isTest
 public class SchoolFunTest
 {
+    SchoolFunSignupControllerExtension controller = new SchoolFunSignupControllerExtension();
     Child__c child = new Child__c(
         Name = 'Test',
         child_last_name__c = 'Last',
@@ -16,15 +17,13 @@ public class SchoolFunTest
         child_health__c = 'No',
     );
 
-    @isTest
-    static void testGetter(){
-        
+    public static testMethod void testGetter(){
+        //
         return;
     }
 
-    @isTest
-    static void testSave(){
-        
+    public static testMethod void testSave(){
+        //
         return;
     }
 
