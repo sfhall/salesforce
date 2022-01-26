@@ -2,7 +2,8 @@
 public class SchoolFunTest
 {
     SchoolFunSignupControllerExtension controller = new SchoolFunSignupControllerExtension();
-    Child__c child = new Child__c(
+    Child__c child = new Child__c
+    (
         Name = 'Test',
         child_last_name__c = 'Last',
         child_DOB__c = '01/01/1999',
@@ -17,13 +18,13 @@ public class SchoolFunTest
         child_health__c = 'No',
     );
 
-    public static testMethod void testGetter(){
-        //
+    public static testMethod void testGetter()
+    {
         return;
     }
 
-    public static testMethod void testSave(){
-        //
+    public static testMethod void testSave()
+    {
         return;
     }
 
