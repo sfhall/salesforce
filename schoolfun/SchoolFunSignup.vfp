@@ -1,4 +1,4 @@
-<apex:page standardController="Child__c" extensions="SchoolFunSignupController">
+<apex:page standardController="Child__c" extensions="SchoolFunSignupControllerExtension">
     <apex:stylesheet value="{!$Resource.SchoolFunCSS}"/>
     <h1>
         School Fun Application

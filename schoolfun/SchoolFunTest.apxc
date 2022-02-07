@@ -1,33 +1,61 @@
 @isTest
 public class SchoolFunTest
 {
-    Date dt = date.newInstance(2001, 1, 1);
-    Child__c child = new Child__c
-    (
-        Name = 'Test',
-        child_last_name__c = 'Last',
-        child_DOB__c = dt,
-        Grade__c = 3,
-        child_address__c = '31-11 12th St, LIC, NY',
-        child_parent__c = 'Parent Name',
-        child_phone__c = '7894563654',
-        child_email__c = 'test@email.com',
-        child_pick_up__c = 'Test name, tester name',
-        child_walk_home__c = True,
-        child_allergies__c = 'No',
-        child_health__c = 'No'
-    );
-    
-    ApexPages.StandardController sc = new ApexPages.StandardController(child);
-    SchoolFunSignupControllerExtension controller = new SchoolFunSignupControllerExtension(sc);
-
-    public static testMethod void testGetter()
+    //tests
+    @isTest static void testGetter()
     {
+        //test data
+        Date dt = date.newInstance(2001, 1, 1);
+        Child__c child = new Child__c
+        (
+            Name = 'Test',
+            child_last_name__c = 'Last',
+            child_DOB__c = dt,
+            Grade__c = 3,
+            child_address__c = '31-11 12th St, LIC, NY',
+            child_parent__c = 'Parent Name',
+            child_phone__c = '7894563654',
+            child_email__c = 'test@email.com',
+            child_pick_up__c = 'Test name, tester name',
+            child_walk_home__c = True,
+            child_allergies__c = 'No',
+            child_health__c = 'No'
+        );
+        
+        ApexPages.StandardController sc = new ApexPages.StandardController(child);
+        SchoolFunSignupControllerExtension controller = new SchoolFunSignupControllerExtension(sc);
+        Child__c c = controller.getChild();
+        //positive case
+        System.assertEquals(c.Grade__c, 3);
         return;
     }
 
-    public static testMethod void testSave()
+    @isTest static void testSave()
     {
+        Date dt = date.newInstance(2001, 1, 1);
+        Child__c child = new Child__c
+        (
+            Name = 'Test',
+            child_last_name__c = 'Last',
+            child_DOB__c = dt,
+            Grade__c = 3,
+            child_address__c = '31-11 12th St, LIC, NY',
+            child_parent__c = 'Parent Name',
+            child_phone__c = '7894563654',
+            child_email__c = 'test@email.com',
+            child_pick_up__c = 'Test name, tester name',
+            child_walk_home__c = True,
+            child_allergies__c = 'No',
+            child_health__c = 'No'
+        );
+        
+        ApexPages.StandardController sc = new ApexPages.StandardController(child);
+        SchoolFunSignupControllerExtension controller = new SchoolFunSignupControllerExtension(sc);
+        
+        controller.save();
+        Child__c c= [SELECt Grade__c FROM Child__c WHERE Grade__c != null];
+        //positive case
+        System.assertEquals(c.Grade__c, 3);
         return;
     }
 
