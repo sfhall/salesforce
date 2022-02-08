@@ -9,17 +9,17 @@ public class SchoolFunTest
         Child__c child = new Child__c
         (
             Name = 'Test',
-            child_last_name__c = 'Last',
-            child_DOB__c = dt,
-            Grade__c = 3,
-            child_address__c = '31-11 12th St, LIC, NY',
-            child_parent__c = 'Parent Name',
-            child_phone__c = '7894563654',
-            child_email__c = 'test@email.com',
-            child_pick_up__c = 'Test name, tester name',
-            child_walk_home__c = True,
-            child_allergies__c = 'No',
-            child_health__c = 'No'
+            last_name__c = 'Last',
+            DOB__c = dt,
+            grade__c = 3,
+            address__c = '31-11 12th St, LIC, NY',
+            parent__c = 'Parent Name',
+            phone__c = '7894563654',
+            email__c = 'test@email.com',
+            pick_up__c = 'Test name, tester name',
+            walk_home__c = True,
+            allergies__c = 'No',
+            health__c = 'No'
         );
         
         ApexPages.StandardController sc = new ApexPages.StandardController(child);
@@ -36,24 +36,24 @@ public class SchoolFunTest
         Child__c child = new Child__c
         (
             Name = 'Test',
-            child_last_name__c = 'Last',
-            child_DOB__c = dt,
-            Grade__c = 3,
-            child_address__c = '31-11 12th St, LIC, NY',
-            child_parent__c = 'Parent Name',
-            child_phone__c = '7894563654',
-            child_email__c = 'test@email.com',
-            child_pick_up__c = 'Test name, tester name',
-            child_walk_home__c = True,
-            child_allergies__c = 'No',
-            child_health__c = 'No'
+            last_name__c = 'Last',
+            DOB__c = dt,
+            grade__c = 3,
+            address__c = '31-11 12th St, LIC, NY',
+            parent__c = 'Parent Name',
+            phone__c = '7894563654',
+            email__c = 'test@email.com',
+            pick_up__c = 'Test name, tester name',
+            walk_home__c = True,
+            allergies__c = 'No',
+            health__c = 'No'
         );
         
         ApexPages.StandardController sc = new ApexPages.StandardController(child);
         SchoolFunSignupControllerExtension controller = new SchoolFunSignupControllerExtension(sc);
-        
+
         controller.save();
-        Child__c c= [SELECt Grade__c FROM Child__c WHERE Grade__c != null];
+        Child__c c= [SELECt grade__c FROM Child__c WHERE grade__c != null];
         //positive case
         System.assertEquals(c.Grade__c, 3);
         return;
