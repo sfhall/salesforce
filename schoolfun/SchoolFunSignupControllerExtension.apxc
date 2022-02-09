@@ -14,6 +14,12 @@ public class SchoolFunSignupControllerExtension
 
     public void save()
     {
+        /*child.involved_programs__c = 'After School Fun';
+        child.start_date__c = date.today();
+        //comment out later, for testing
+        Date dt = date.newInstance(2001, 1, 1);
+        child.DOB__c = dt;*/
+
         try
         {
             insert child;

@@ -16,7 +16,7 @@ public class SchoolFunTest
             parent__c = 'Parent Name',
             phone__c = '7894563654',
             email__c = 'test@email.com',
-            pick_up__c = 'Test name, tester name',
+            pick_up_list__c = 'Test name, tester name',
             walk_home__c = True,
             allergies__c = 'No',
             health__c = 'No'
@@ -43,7 +43,7 @@ public class SchoolFunTest
             parent__c = 'Parent Name',
             phone__c = '7894563654',
             email__c = 'test@email.com',
-            pick_up__c = 'Test name, tester name',
+            pick_up_list__c = 'Test name, tester name',
             walk_home__c = True,
             allergies__c = 'No',
             health__c = 'No'

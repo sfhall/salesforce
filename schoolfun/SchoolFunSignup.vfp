@@ -15,6 +15,12 @@
             <apex:outputLabel value="Date of Birth"></apex:outputLabel>
             <apex:inputField value="{!Child__c.DOB__c}" required="true"/>
 
+            <apex:outputLabel value="Gender"></apex:outputLabel>
+            <apex:inputField value="{!Child__c.gender__c}" required="true"/>
+
+            <apex:outputLabel value="Languages spoken"></apex:outputLabel>
+            <apex:inputField value="{!Child__c.languages__c}" required="true"/>
+
             <apex:outputLabel value="Grade"></apex:outputLabel>
             <apex:inputField value="{!Child__c.grade__c}" required="true"/>
 
@@ -41,7 +47,7 @@
             hmmm-->
 
             <apex:outputLabel value="Allow this person to pick up my child (1)"></apex:outputLabel>
-            <apex:inputField value="{!Child__c.pick_up__c}" required="true"/>
+            <apex:inputField value="{!Child__c.pick_up_list__c}" required="true"/>
 
             <apex:outputLabel value="I give my permission for my child to walk home by theirselves at 6pm dismissal time."></apex:outputLabel>
             <apex:inputField value="{!Child__c.walk_home__c}" required="false"/>
