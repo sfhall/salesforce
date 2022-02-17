@@ -35,6 +35,9 @@
             <apex:outputLabel value="Phone Number"></apex:outputLabel>
             <apex:inputField value="{!Child__c.phone__c}" required="true"/>
 
+            <apex:outputLabel value="Phone Number"></apex:outputLabel>
+            <apex:inputField value="{!Child__c.business_phone__c}" required="true"/>
+
             <apex:outputLabel value="Email Address"></apex:outputLabel>
             <apex:inputField value="{!Child__c.email__c}" required="true"/>
 
