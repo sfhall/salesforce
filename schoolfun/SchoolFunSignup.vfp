@@ -10,59 +10,70 @@
             <apex:inputField value="{!Child__c.Name}" required="true"/> 
 
             <apex:outputLabel value="Last Name " styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.last_name__c}" required="true"/>
+            <apex:inputField value="{!Child__c.last_name__c}" styleClass="input-field" required="true"/>
 
             <apex:outputLabel value="Date of Birth" styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.DOB__c}" required="true"/>
+            <apex:inputField value="{!Child__c.DOB__c}" styleClass="input-field" required="true"/>
 
             <apex:outputLabel value="Gender" styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.gender__c}" required="true"/>
+            <apex:inputField value="{!Child__c.gender__c}" styleClass="input-field" required="true"/>
 
             <apex:outputLabel value="Languages spoken" styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.languages__c}" required="true"/>
+            <apex:inputField value="{!Child__c.languages__c}" styleClass="input-field" required="true"/>
 
             <apex:outputLabel value="Grade" styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.grade__c}" required="true"/>
+            <apex:inputField value="{!Child__c.grade__c}" styleClass="input-field" required="true"/>
 
             <apex:outputLabel value="Address" styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.address__c}" required="true"/>
+            <apex:inputField value="{!Child__c.address__c}" styleClass="input-field" required="true"/>
 
             <!--hmmm-->
             <apex:outputLabel value="Parent" styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.parent__c}" required="true"/>
+            <apex:inputField value="{!Child__c.parent__c}" styleClass="input-field" required="true"/>
             <!--hmmm-->
 
             <apex:outputLabel value="Phone Number" styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.phone__c}" required="true"/>
+            <apex:inputField value="{!Child__c.phone__c}" styleClass="input-field" required="true"/>
 
             <apex:outputLabel value="Business Phone Number" styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.business_phone__c}" required="false"/>
+            <apex:inputField value="{!Child__c.business_phone__c}" styleClass="input-field" required="false"/>
 
             <apex:outputLabel value="Email Address" styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.email__c}" required="true"/>
+            <apex:inputField value="{!Child__c.email__c}" styleClass="input-field" required="true"/>
 
-            <!--hmmm...can i link this to the EC? auto create EC record and link to child?
-            <apex:outputLabel value="Emergency Contact #1"/>
-            <apex:inputField value="{!Child__c.ec_primary__c}" required="true"/>
+            <!--create blocking sections-->
+            <h1>Emergency Contact</h1>
+            <apex:outputLabel value="Name" styleClass="output-field"/>
+            <apex:inputField value="{!Child__c.emergency_contact_name__c}" styleClass="input-field" required="true"/>
 
-            <apex:outputLabel value="Emergency Contact #2"/>
-            <apex:inputField value="{!Child__c.ec_secondary__c}" required="true"/>
-            hmmm-->
+            <apex:outputLabel value="Email Address" styleClass="output-field"/>
+            <apex:inputField value="{!Child__c.emergency_contact_email__c}" styleClass="input-field" required="true"/>
 
+            <apex:outputLabel value="Phone Number" styleClass="output-field"/>
+            <apex:inputField value="{!Child__c.emergency_contact_phone__c}" styleClass="input-field" required="true"/>
+
+            <apex:outputLabel value="Secondary Phone Number" styleClass="output-field"/>
+            <apex:inputField value="{!Child__c.emergency_contact_second_phone__c}" styleClass="input-field" required="true"/>
+
+            <apex:outputLabel value="Preferred Contact Method" styleClass="output-field"/>
+            <apex:inputField value="{!Child__c.emergency_contact_preferred_contact__c}" styleClass="input-field" required="true"/>
+            <!--end EC area-->
+
+            <h1>Child Details</h1>
             <apex:outputLabel value="Allow this person to pick up my child (1)" styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.pick_up_list__c}" required="true"/>
+            <apex:inputField value="{!Child__c.pick_up_list__c}" styleClass="input-field" required="true"/>
 
             <apex:outputLabel value="I give my permission for my child to walk home by theirselves at 6pm dismissal time." styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.walk_home__c}" required="false"/>
+            <apex:inputField value="{!Child__c.walk_home__c}" styleClass="input-field" required="false"/>
             
             <apex:outputLabel value="Does your child have any allergies?" styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.allergies__c}" required="false"/>
+            <apex:inputField value="{!Child__c.allergies__c}" styleClass="input-field" required="false"/>
             
             <apex:outputLabel value="Does your child have any other health issues/conditions?" styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.health__c}" required="false"/>
+            <apex:inputField value="{!Child__c.health__c}" styleClass="input-field" required="false"/>
             
             <apex:outputLabel value="If your child needs to be picked up, check the appropriate school:" styleClass="output-field"/>
-            <apex:inputField value="{!Child__c.pick_up_school__c}" required="false"/>
+            <apex:inputField value="{!Child__c.pick_up_school__c}" styleClass="input-field" required="false"/>
             
             <apex:commandButton action="{!save}" value="Save"/>
         </apex:form>
